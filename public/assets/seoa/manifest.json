@@ -1,0 +1,13 @@
+{
+  "character": "백서아",
+  "relationship": "lover",
+  "personality": "시크하고 단정한 반말, 사용자에게만 절제되고 직접적인 다정함",
+  "source": "output/character-concepts/2026-10-18/selected-character.png",
+  "baseSha256": "67d1a30d6459fffc5d9f5e404593d45fbba7d32fa59985b62fd4ba4c06064e6f",
+  "tool": "built-in image_gen",
+  "prompts": {
+    "blink": "Use case: identity-preserve. Edit this exact photo into one animation blink frame. This fictional adult Korean woman Baek Seo-a is the sole subject. Change ONLY both eyelids: both eyes gently and completely closed mid-blink, relaxed closed eyelids with the same eyeliner and lashes. Preserve EXACTLY face identity, face position, head tilt, face outline, nose, parted lips, expression, every hair strand, clothing, necklace, earrings, black background and red rim lighting. Do not move the camera, resize the face, beautify, smile, age her, or change gaze direction/head pose. Output the identical portrait composition and aspect ratio, as precisely registered to the original as possible. This is a sprite overlay frame so all pixels outside the eyelids should remain unchanged. No text, no layout, one photo only.",
+    "soft": "Use case: identity-preserve. Edit this exact portrait of fictional adult Korean woman Baek Seo-a. Change ONLY expression to a barely perceptible warm closed-mouth smile, corners of lips rise just a little, calm self-possessed chic expression, affectionate without being cute or coy. Preserve exact facial identity/face shape, photographic realism, face position and head angle, platinum blonde bob and fringe, same crystal jewelry, black square-neck top, same black background and red rim light. The same woman in the exact same photo, not a lookalike or a new portrait. No exaggerated grin, no teeth, no aegyo, no new outfit, no camera movement. Keep original portrait aspect ratio. One image no text.",
+    "thoughtful": "Use case: identity-preserve. Edit this exact portrait of fictional adult Korean woman Baek Seo-a. Change ONLY expression to a composed, attentive, thoughtful look: lips relaxed closed, eyes focused, brows almost unchanged. Cool chic confidence with subtle concern, not anger or sadness. Preserve exact facial identity/face shape, youthful adult natural appearance, head position and tilt, platinum blonde bob, hair strands, makeup, necklace, earrings, black square-neck top, same black background and red rim light. Camera and composition locked; same person and photo. Do not reshape face, add wrinkles, enlarge eyes, pout or act cute. Keep original portrait aspect ratio, one image no text."
+  }
+}

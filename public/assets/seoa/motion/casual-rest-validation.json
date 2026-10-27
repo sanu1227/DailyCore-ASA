@@ -1,0 +1,38 @@
+[
+  {
+    "id": "casual-blink",
+    "width": 1122,
+    "height": 1402,
+    "stationaryRegionMAE255": 2.426
+  },
+  {
+    "id": "casual-glance",
+    "width": 1122,
+    "height": 1402,
+    "stationaryRegionMAE255": 2.721
+  },
+  {
+    "id": "casual-tilt",
+    "width": 1122,
+    "height": 1402,
+    "stationaryRegionMAE255": 2.926
+  },
+  {
+    "id": "rest-blink",
+    "width": 1122,
+    "height": 1402,
+    "stationaryRegionMAE255": 3.585
+  },
+  {
+    "id": "rest-glance",
+    "width": 1122,
+    "height": 1402,
+    "stationaryRegionMAE255": 3.866
+  },
+  {
+    "id": "rest-tilt",
+    "width": 1122,
+    "height": 1402,
+    "stationaryRegionMAE255": 3.36
+  }
+]

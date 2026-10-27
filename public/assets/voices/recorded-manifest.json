@@ -1,0 +1,35 @@
+{
+  "source": "붕괴 스타레일 토오사카 린 모든 음성(일본어) - Honkai Star Rail.mp3",
+  "notes": "User-supplied recording, locally transcribed in Japanese. Text and Korean glosses are editorial aids, not official subtitles. Categories indicate a suitable reaction; voices do not read the notification body.",
+  "categories": {
+    "greeting": ["rin-recorded-morning.wav"],
+    "casual": ["rin-recorded-laugh.wav", "rin-recorded-right.wav", "rin-recorded-confidence.wav"],
+    "away": ["rin-recorded-reassure.wav", "rin-recorded-laugh.wav"],
+    "break": ["rin-recorded-reassure.wav", "rin-recorded-confidence.wav"],
+    "meal": ["rin-recorded-look.wav", "rin-recorded-laugh.wav"],
+    "study": ["rin-recorded-together.wav", "rin-recorded-elegant.wav"],
+    "priority": ["rin-recorded-promise.wav", "rin-recorded-own-path.wav"],
+    "bedtime": ["rin-recorded-tomorrow.wav"],
+    "success": ["rin-recorded-progress.wav", "rin-recorded-together.wav"],
+    "review": ["rin-recorded-progress.wav", "rin-recorded-together.wav"]
+  },
+  "clips": [
+    {"file":"rin-recorded-tease-stubborn.wav", "source":"[티비플] 어리광 부리는 토오사카.mp3", "start":8.20, "end":10.12, "ja":"なんで倒れないのよ", "ko":"왜 쓰러지지 않는 거야"},
+    {"file":"rin-recorded-tease-question.wav", "source":"[티비플] 어리광 부리는 토오사카.mp3", "start":16.40, "end":18.70, "ja":"だいたいどこであいつと知り合ったの", "ko":"대체 어디서 걔를 알게 된 거야"},
+    {"file":"rin-recorded-tease-fine.wav", "source":"[티비플] 어리광 부리는 토오사카.mp3", "start":31.20, "end":32.75, "ja":"まあいいわ", "ko":"뭐, 됐어"},
+    {"file":"rin-recorded-tease-challenge.wav", "source":"[티비플] 어리광 부리는 토오사카.mp3", "start":32.78, "end":34.94, "ja":"いずれ決着はつけるから", "ko":"언젠가 결판을 낼 거니까"},
+    {"file":"rin-recorded-tease-decide.wav", "source":"[티비플] 어리광 부리는 토오사카.mp3", "start":38.27, "end":39.89, "ja":"で、どうするの", "ko":"그래서, 어떻게 할 거야"},
+    {"file":"rin-recorded-reassure.wav", "start":5.27, "end":6.63, "ja":"安心して", "ko":"안심해"},
+    {"file":"rin-recorded-laugh.wav", "start":14.98, "end":16.33, "ja":"ふふふ", "ko":"후후, 짧은 웃음"},
+    {"file":"rin-recorded-morning.wav", "start":20.08, "end":21.40, "ja":"おはよう", "ko":"좋은 아침"},
+    {"file":"rin-recorded-tomorrow.wav", "start":27.94, "end":30.25, "ja":"それじゃ、また明日", "ko":"그럼, 내일 봐"},
+    {"file":"rin-recorded-own-path.wav", "start":36.03, "end":41.30, "ja":"自分の人生は自分の手で開拓しなくっちゃ。そうでしょ", "ko":"자기 인생은 자기 손으로 개척해야지. 그렇지?"},
+    {"file":"rin-recorded-right.wav", "start":40.06, "end":41.30, "ja":"そうでしょ", "ko":"그렇지?"},
+    {"file":"rin-recorded-look.wav", "start":95.70, "end":96.49, "ja":"ほら", "ko":"자, 봐"},
+    {"file":"rin-recorded-confidence.wav", "start":120.38, "end":122.02, "ja":"どうってことないわ", "ko":"별것 아니야"},
+    {"file":"rin-recorded-promise.wav", "start":387.78, "end":389.00, "ja":"約束よ", "ko":"약속이야"},
+    {"file":"rin-recorded-progress.wav", "start":407.81, "end":410.12, "ja":"また一つ壁を越えたわ", "ko":"또 하나의 벽을 넘었어"},
+    {"file":"rin-recorded-elegant.wav", "start":410.92, "end":415.77, "ja":"優雅に、華麗に、大胆に。一緒に開拓しましょう", "ko":"우아하게, 화려하게, 대담하게. 함께 개척하자"},
+    {"file":"rin-recorded-together.wav", "start":413.87, "end":415.77, "ja":"一緒に開拓しましょう", "ko":"함께 개척하자"}
+  ]
+}

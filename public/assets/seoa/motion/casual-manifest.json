@@ -1,0 +1,23 @@
+[
+  {
+    "id": "casual-blink",
+    "filename": "casual-blink.png",
+    "source": "public/assets/seoa/gallery/29.png",
+    "prompt": "Use case: identity-preserve, precise minimal edit. Input image is the exact animation FRAME to edit, not a loose style reference. Produce ONE full-frame photorealistic frame matching the input at 1122x1402. Preserve the SAME fictional adult Korean woman Baek Seo-a and preserve almost the entire image unchanged. Camera is locked: identical crop, scale, focal length, perspective, head center, facial landmark placement, body position, black hoodie and every fold, hands and fingers, desk, controller, chair, lamp, screen, background, colors, texture, focus and illumination. Do not recompose, redraw a new portrait, beautify, age, change expression, change hairstyle or alter her recognizable face. Her chin must remain supported by the same hand, absolutely no changes to fingers or wrist. No text, watermark, border or montage. This frame will alternate with the source at the SAME coordinates, so all stationary elements must register precisely. Change only the very small motion explicitly specified next. ONLY CHANGE: both eyelids are naturally and COMPLETELY CLOSED at the midpoint of one relaxed blink. Hide irises and pupils fully behind the eyelids. Realistic thin closed lash lines, no squint, no smile change, no eyebrow movement, no cheek change. Do not lower or rotate her head. Leave all non-eyelid pixels and features as close to unchanged as possible.",
+    "path": "public/assets/seoa/motion/casual-blink.png"
+  },
+  {
+    "id": "casual-glance",
+    "filename": "casual-glance.png",
+    "source": "public/assets/seoa/gallery/29.png",
+    "prompt": "Use case: identity-preserve, precise minimal edit. Input image is the exact animation FRAME to edit, not a loose style reference. Produce ONE full-frame photorealistic frame matching the input at 1122x1402. Preserve the SAME fictional adult Korean woman Baek Seo-a and preserve almost the entire image unchanged. Camera is locked: identical crop, scale, focal length, perspective, head center, facial landmark placement, body position, black hoodie and every fold, hands and fingers, desk, controller, chair, lamp, screen, background, colors, texture, focus and illumination. Do not recompose, redraw a new portrait, beautify, age, change expression, change hairstyle or alter her recognizable face. Her chin must remain supported by the same hand, absolutely no changes to fingers or wrist. No text, watermark, border or montage. This frame will alternate with the source at the SAME coordinates, so all stationary elements must register precisely. Change only the very small motion explicitly specified next. ONLY CHANGE: shift both irises/pupils together just 2–3 degrees toward the LEFT edge of the frame, a tiny side glance. Eyes remain naturally open with same eyelid shape and eye size. Eyebrows, head, lips, cheek, nose, hair, hand and all other content remain stationary. Keep the original relaxed closed mouth, not a new expression.",
+    "path": "public/assets/seoa/motion/casual-glance.png"
+  },
+  {
+    "id": "casual-tilt",
+    "filename": "casual-tilt.png",
+    "source": "public/assets/seoa/gallery/29.png",
+    "prompt": "Use case: identity-preserve, precise minimal edit. Input image is the exact animation FRAME to edit, not a loose style reference. Produce ONE full-frame photorealistic frame matching the input at 1122x1402. Preserve the SAME fictional adult Korean woman Baek Seo-a and preserve almost the entire image unchanged. Camera is locked: identical crop, scale, focal length, perspective, head center, facial landmark placement, body position, black hoodie and every fold, hands and fingers, desk, controller, chair, lamp, screen, background, colors, texture, focus and illumination. Do not recompose, redraw a new portrait, beautify, age, change expression, change hairstyle or alter her recognizable face. Her chin must remain supported by the same hand, absolutely no changes to fingers or wrist. No text, watermark, border or montage. This frame will alternate with the source at the SAME coordinates, so all stationary elements must register precisely. Change only the very small motion explicitly specified next. ONLY CHANGE: an extremely subtle ONE-degree clockwise head tilt around the current head center, with a correspondingly tiny movement at the loose ends of her platinum bob. This is a micro-motion, less than a normal visible change of pose. Keep the chin/hand contact point fixed, fingers completely identical, body unchanged, original eye gaze and original mouth expression. No zoom or pan. Background and clothing must not move at all.",
+    "path": "public/assets/seoa/motion/casual-tilt.png"
+  }
+]

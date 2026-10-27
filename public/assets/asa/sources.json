@@ -1,0 +1,38 @@
+{
+  "accessed": "2026-10-19",
+  "credit": "© YG ENTERTAINMENT",
+  "photos": [
+    {
+      "file": "portrait.jpg",
+      "title": "공식 프로필",
+      "page": "https://www.ygfamily.com/ko/artists/babymonster/profile",
+      "url": "https://www.ygfamily.com/contents/images/2026/06/3_A.jpg",
+      "sha256": "9f0d9fd14fdaf3f0ae3f591f7089dfa719b4a06e6fcfb7551fcb99edd568a481",
+      "bytes": 107060
+    },
+    {
+      "file": "choom.jpg",
+      "title": "CHOOM · 비주얼 포토",
+      "page": "https://yg-life.com/archives/196539?lang=en",
+      "url": "https://yg-life.com/wp-content/uploads/2026/04/9b33e6ee67bcf20c24ad87a669c5ba60-scaled.jpg",
+      "sha256": "75d936e571a9abb8102fd4b07daf1806e287d6badb105b52bb6ea1582a069914",
+      "bytes": 737206
+    },
+    {
+      "file": "moon.jpg",
+      "title": "MOON · 비주얼 포토",
+      "page": "https://yg-life.com/archives/197541?lang=en",
+      "url": "https://yg-life.com/wp-content/uploads/2026/07/2867301d200f788b2f9aacae1eb87dfb-scaled.jpg",
+      "sha256": "bcc29ae8a54287641f81170c71a8becb015cb1199a82c3477cbe0a21c0ab6bf9",
+      "bytes": 518995
+    },
+    {
+      "file": "supa-dupa-luv.jpg",
+      "title": "SUPA DUPA LUV · 비주얼 포토",
+      "page": "https://yg-life.com/archives/195883?lang=en",
+      "url": "https://yg-life.com/wp-content/uploads/2025/12/0b3dd9067e008068086b64d63a28b162.jpg",
+      "sha256": "2112a2b6cc87993b23f5ccd5f7bd78a54e522a7a83082e5374bf688daf55338a",
+      "bytes": 2629235
+    }
+  ]
+}

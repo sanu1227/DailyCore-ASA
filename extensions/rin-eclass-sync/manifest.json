@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "아사 e-Class Sync",
+  "version": "0.3.2",
+  "description": "한국공학대학교 e-Class의 Todo 일정을 아사 앱으로 가져옵니다.",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["https://eclass.tukorea.ac.kr/*", "http://127.0.0.1:4317/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "e-Class를 아사와 동기화", "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "matches": ["http://127.0.0.1:4317/*"],
+      "js": ["bridge.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://eclass.tukorea.ac.kr/ilos/*"],
+      "js": ["auto-sync.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

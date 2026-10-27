@@ -1,0 +1,27 @@
+{
+  "tool": "built-in image_gen",
+  "source": "public/assets/seoa/gallery/portrait.png",
+  "frames": [
+    {
+      "id": "studio-half",
+      "filename": "studio-half.png",
+      "prompt": "Use case: identity-preserve. Edit target: the supplied portrait photograph. Create ONE tiny successive animation frame of this exact existing portrait, NOT a new portrait or reshoot. The fictional Korean woman is an adult in her early twenties. Preserve her EXACT identity and youthful adult facial structure, eyes, nose, coral lips, platinum-blonde bob, wispy fringe, black ribbed top, earrings, crystal choker, dark background and red rim light. LOCK the camera, canvas size and aspect ratio (1122x1402), crop, magnification, face placement, shoulders, torso, outfit, necklace, skin texture, brightness, exposure and all background pixels. Keep the same facial expression, slightly parted lips and existing head angle unless the tiny change below explicitly says otherwise. Do not beautify, smooth, sharpen, reshape, repaint, relight, recolor, zoom or add anything. This frame will alternate directly with the original, so stable alignment and extremely small local change are essential. One finished opaque PNG photo, no text, logo or montage. ONLY CHANGE: both upper eyelids move naturally downward to the midpoint of a blink, approximately HALF-CLOSED eyes. Keep the lower lids, brows, eyeball direction and all facial landmarks stationary. The eyes are neither fully shut nor sleepy; this is one brief halfway blink frame. Make no other visible change.",
+      "source": "public/assets/seoa/gallery/portrait.png",
+      "path": "public/assets/seoa/motion/studio-half.png"
+    },
+    {
+      "id": "studio-glance",
+      "filename": "studio-glance.png",
+      "prompt": "Use case: identity-preserve. Edit target: the supplied portrait photograph. Create ONE tiny successive animation frame of this exact existing portrait, NOT a new portrait or reshoot. The fictional Korean woman is an adult in her early twenties. Preserve her EXACT identity and youthful adult facial structure, eyes, nose, coral lips, platinum-blonde bob, wispy fringe, black ribbed top, earrings, crystal choker, dark background and red rim light. LOCK the camera, canvas size and aspect ratio (1122x1402), crop, magnification, face placement, shoulders, torso, outfit, necklace, skin texture, brightness, exposure and all background pixels. Keep the same facial expression, slightly parted lips and existing head angle unless the tiny change below explicitly says otherwise. Do not beautify, smooth, sharpen, reshape, repaint, relight, recolor, zoom or add anything. This frame will alternate directly with the original, so stable alignment and extremely small local change are essential. One finished opaque PNG photo, no text, logo or montage. ONLY CHANGE: shift both irises and pupils coherently just 2–3 degrees toward the LEFT EDGE of the image, a tiny sideways eye glance (roughly a few pixels), while keeping head, eyelids, brows, mouth and all other facial landmarks exactly stationary. Eyes remain naturally open at the same height as the original. This is a micro eye motion, not a side-looking pose or eye roll. Make no other visible change.\nThis must remain an ordinary neutral fully clothed adult portrait. Leave the clothing and body completely unchanged. The requested edit is restricted exclusively to a tiny horizontal eye-gaze movement.",
+      "source": "public/assets/seoa/gallery/portrait.png",
+      "path": "public/assets/seoa/motion/studio-glance.png"
+    },
+    {
+      "id": "studio-tilt",
+      "filename": "studio-tilt.png",
+      "prompt": "Use case: identity-preserve. Edit target: the supplied portrait photograph. Create ONE tiny successive animation frame of this exact existing portrait, NOT a new portrait or reshoot. The fictional Korean woman is an adult in her early twenties. Preserve her EXACT identity and youthful adult facial structure, eyes, nose, coral lips, platinum-blonde bob, wispy fringe, black ribbed top, earrings, crystal choker, dark background and red rim light. LOCK the camera, canvas size and aspect ratio (1122x1402), crop, magnification, face placement, shoulders, torso, outfit, necklace, skin texture, brightness, exposure and all background pixels. Keep the same facial expression, slightly parted lips and existing head angle unless the tiny change below explicitly says otherwise. Do not beautify, smooth, sharpen, reshape, repaint, relight, recolor, zoom or add anything. This frame will alternate directly with the original, so stable alignment and extremely small local change are essential. One finished opaque PNG photo, no text, logo or montage. ONLY CHANGE: add a barely perceptible approximately ONE DEGREE clockwise tilt to the existing head pose, around the neck pivot. Keep the face center at almost exactly the same position (no more than a few pixels shift), preserve exact face shape and expression, keep the shoulders and torso entirely fixed. Allow only a tiny natural displacement of the bob's outer hair tips consistent with this one-degree motion. Do not rotate the whole image, do not change the viewing direction or turn the face in 3D. This is a near-identical adjacent animation frame.",
+      "source": "public/assets/seoa/gallery/portrait.png",
+      "path": "public/assets/seoa/motion/studio-tilt.png"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>아사</title><link rel="stylesheet" href="/style.css"><script type="module" src="/client.js"></script></head>
+<body data-view="chat">
+<a href="#workspace" class="skip-link">본문으로 건너뛰기</a>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="#home" data-view="home" aria-label="나의 하루"><span class="gem rin-brand-image" aria-hidden="true"><img src="/assets/asa/portrait.jpg" alt="" width="40" height="40"></span><span>ASA<span class="brand-dot">.</span></span></a>
+    <nav aria-label="메인 메뉴">
+      <button class="nav active" data-view="home" aria-current="page"><span aria-hidden="true">⌂</span> 나의 하루</button>
+      <button class="nav" data-view="chat"><span>◌</span> 아사와 대화</button>
+      <button class="nav" data-view="university"><span>▦</span> 대학교 생활 <span id="academic-count" class="count">0</span></button>
+      <button class="nav" data-view="routines"><span>✓</span> 생활 <span id="routine-count" class="count">0</span></button>
+      <button class="nav" data-view="activity"><span>◷</span> PC 활동</button>
+      <button class="nav" data-view="review"><span>✦</span> 하루 결산</button>
+      <button class="nav" data-view="memory"><span>◇</span> 기억 <span id="memory-count" class="count">0</span></button>
+      <button class="nav" data-view="settings"><span>⚙</span> 설정</button>
+    </nav>
+
+
+  </aside>
+  <main id="workspace" tabindex="-1">
+    <header class="topbar"><div class="app-location"><strong id="current-view-title">나의 하루</strong><span class="topbar-divider">/</span><span id="date"></span></div><div class="topbar-actions"><button id="show-widget" class="surface-button" type="button"><span aria-hidden="true">◌</span> 위젯으로</button></div></header>
+    <div class="content">
+      <section class="view" id="view-home" aria-labelledby="home-title" hidden>
+        <div class="home-heading"><div><h1 id="home-title" tabindex="-1">오늘의 일정</h1></div></div>
+        <div class="home-layout">
+          <section class="daily-desk" aria-labelledby="desk-title">
+            <div class="desk-heading"><div><h2 id="desk-title">오늘의 흐름</h2></div><button class="text-button" data-view="university">전체 일정 <span aria-hidden="true">↗</span></button></div>
+            <div class="day-metrics"><button data-view="university"><span>오늘 수업</span><strong id="home-class-count">—</strong></button><button data-view="university"><span>7일 안의 마감</span><strong id="home-due-count">—</strong></button><button data-view="routines"><span>완료한 루틴</span><strong id="home-routine-count">—</strong></button></div>
+            <div class="agenda-heading"><h3>오늘 수업</h3><span id="home-class-caption">시간표를 확인하는 중</span></div><div id="home-classes" class="home-agenda"></div>
+            <div class="agenda-heading"><h3>먼저 챙길 일</h3><button class="text-button" data-view="university">과제·시험 보기</button></div><div id="home-deadlines" class="home-agenda"></div>
+          </section>
+          <aside class="home-side">
+            <section class="rin-presence" aria-label="아사와 대화"><div id="seoa-home-portrait" class="rin-portrait seoa-portrait seoa-home-portrait" aria-label="아사 공식 사진"><div class="seoa-portrait-stage" data-expression="portrait"><img class="seoa-portrait-base" src="/assets/asa/supa-dupa-luv.jpg" alt="아사 · SUPA DUPA LUV 공식 사진" width="1122" height="1402"></div><span class="seoa-portrait-fallback">아사</span></div><button class="presence-action" data-view="chat">아사와 대화하기 <span aria-hidden="true">↗</span></button></section>
+            <section class="home-routines" aria-labelledby="home-routines-title"><div class="agenda-heading"><h2 id="home-routines-title">오늘 루틴</h2><button class="text-button" data-view="routines">모두 보기</button></div><div id="home-routines"></div></section>
+            <button class="daily-note" data-view="health"><span class="note-icon" aria-hidden="true">♡</span><span><strong>생활 기록</strong><small>수면, 식사, 컨디션 남기기</small></span><span aria-hidden="true">→</span></button>
+          </aside>
+        </div>
+      </section>
+      <section class="view" id="view-chat" aria-label="아사와 대화">
+        <div class="conversation-layout">
+          <div class="chat-card">
+            <div class="chat-header"><div class="chat-identity"><h1><span class="chat-presence-dot" aria-hidden="true"></span> 아사 </h1><small id="chat-status" hidden></small></div><button id="open-details" class="widget-only details-button" type="button">상세 <span aria-hidden="true">↗</span></button><button class="quiet app-only" data-view="university">일정</button><button id="open-chat-menu" class="quiet" aria-label="메뉴 열기" aria-haspopup="dialog">⋯</button></div>
+            <div class="chat-presence">
+            <div id="seoa-portrait" class="seoa-portrait" aria-label="아사의 모습">
+              <div class="seoa-portrait-stage" data-expression="portrait"><img class="seoa-portrait-base" src="/assets/asa/moon.jpg" alt="아사 · MOON 공식 사진" width="1707" height="2560" fetchpriority="high"></div>
+              <span class="seoa-portrait-fallback">아사</span>
+            </div>
+            <div class="seoa-scene-controls" role="group" aria-label="아사의 모습 선택"><button type="button" data-portrait-scene="studio" aria-pressed="true">MOON</button><button type="button" data-portrait-scene="casual" aria-pressed="false">CHOOM</button><button type="button" data-portrait-scene="rest" aria-pressed="false" title="SUPA DUPA LUV">SUPA DUPA</button></div>
+            </div>
+            <button id="chat-next" class="chat-next" hidden></button>
+            <div id="messages" class="messages" role="log" aria-label="대화 기록" aria-live="polite"></div>
+            <p id="chat-error" class="chat-error" role="alert" hidden></p>
+            <form id="chat-form" class="composer"><label class="sr-only" for="message">아사에게 보낼 메시지</label><textarea id="message" rows="2" maxlength="4000" placeholder="메시지 입력" title="Enter로 보내기 · Shift+Enter로 줄바꿈"></textarea><button id="send" class="send" aria-label="메시지 보내기">↑</button></form>
+            <div class="composer-footer"><span id="usage" class="sr-only">사용량 집계 없음</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="view" id="view-university" hidden>
+        <div class="section-heading"><div><h1>내 일정</h1></div><div class="button-row"><button id="eclass-sync" class="sync-button">↻ e-Class 동기화</button><button id="add-class" class="secondary">＋ 수업</button><button id="add-academic" class="primary">＋ 일정</button></div></div>
+        <div class="university-summary">
+          <article class="summary-card"><span>오늘 수업</span><strong id="today-class-count">0</strong><small>개</small></article>
+          <article class="summary-card"><span>7일 안의 마감</span><strong id="week-due-count">0</strong><small>개</small></article>
+          <article class="summary-card urgent"><span>지난 마감</span><strong id="overdue-count">0</strong><small>개</small></article>
+        </div>
+        <div class="integration-note"><span class="status-dot"></span><span id="eclass-status">e-Class 연결 전</span><a href="https://eclass.tukorea.ac.kr/ilos/main/main_form.acl" target="_blank" rel="noopener">e-Class 열기 ↗</a></div>
+        <article id="briefing-card" class="briefing-card" hidden><div><h2 id="briefing-title">아사 · 오늘 브리핑</h2></div><p id="briefing-body"></p><small id="briefing-time"></small></article>
+        <div id="focus-status" class="integration-note focus-note" hidden><span class="status-dot"></span><span id="focus-status-text"></span></div>
+        <div class="campus-layout">
+          <section class="panel campus-panel"><div class="panel-heading"><div><h2>주간 시간표</h2></div><button id="add-class-empty" class="text-button">수업 추가 →</button></div><div id="class-list" class="class-list"></div></section>
+          <section class="panel campus-panel"><div class="panel-heading"><div><h2>과제와 시험</h2></div><button id="add-academic-empty" class="text-button">일정 추가 →</button></div><div id="academic-list" class="academic-list"></div></section>
+          <section class="panel campus-panel missing-panel"><div class="panel-heading"><div><h2>완료 확인 필요</h2></div><span id="missing-academic-count" class="past-count">0개</span></div><div id="missing-academic-list" class="academic-list"></div></section>
+          <section class="panel campus-panel overdue-panel"><div class="panel-heading"><div><h2>지난 과제</h2></div><span id="past-academic-count" class="past-count">미완료 0개</span></div><div id="past-academic-list" class="academic-list"></div></section>
+        </div>
+      </section>
+      <section class="view" id="view-routines" hidden>
+        <div class="section-heading life-heading"><div><h1>생활</h1><p>오늘의 루틴과 하루 기록을 한곳에서.</p></div></div>
+        <div class="life-columns">
+          <section class="panel life-routines" aria-labelledby="life-routines-title">
+            <div class="panel-heading"><div><p class="life-date" id="routine-today-date"></p><h2 id="life-routines-title">오늘의 루틴</h2></div><button id="add-routine" class="secondary">＋ 루틴 추가</button></div>
+            <div class="life-progress"><span id="routine-progress" class="routine-progress">0 / 0 완료</span><progress id="routine-progress-bar" max="1" value="0" aria-label="오늘 루틴 완료"></progress></div>
+            <div id="today-routines" class="routine-list"></div>
+            <details class="routine-library">
+              <summary><span>등록한 루틴 관리</span><span id="routine-library-count">0개</span></summary>
+              <div id="all-routines" class="routine-list"></div>
+              <button id="add-routine-empty" class="text-button" type="button">＋ 새 루틴 추가</button>
+            </details>
+          </section>
+          <form id="health-form" class="panel life-record" aria-labelledby="life-record-title">
+            <div class="panel-heading"><div><h2 id="life-record-title">하루 기록</h2><p>기억하고 싶은 하루를 짧게 남겨요.</p></div><span id="health-record-status" class="life-status" role="status">새 기록</span></div>
+            <div class="record-date-row"><label for="health-date">기록 날짜</label><input id="health-date" type="date" required><button id="health-today" class="text-button" type="button">오늘</button></div>
+            <div class="life-fields">
+              <div><label for="health-sleep">수면</label><div class="life-number"><input id="health-sleep" type="number" min="0" max="24" step="0.5" value="7" required aria-describedby="health-sleep-unit"><span id="health-sleep-unit">시간</span></div></div>
+              <div><label for="health-exercise">운동</label><div class="life-number"><input id="health-exercise" type="number" min="0" max="600" step="1" value="0" required aria-describedby="health-exercise-unit"><span id="health-exercise-unit">분</span></div></div>
+              <div><label for="health-meals">식사</label><div class="life-number"><input id="health-meals" type="number" min="0" max="6" step="1" value="3" required aria-describedby="health-meals-unit"><span id="health-meals-unit">회</span></div></div>
+              <div><label for="health-water">물</label><div class="life-number"><input id="health-water" type="number" min="0" max="30" step="1" value="6" required aria-describedby="health-water-unit"><span id="health-water-unit">잔</span></div></div>
+            </div>
+            <div class="life-energy"><label for="health-energy">컨디션 <output id="health-energy-value" for="health-energy">3 / 5 · 보통</output></label><input id="health-energy" type="range" min="1" max="5" value="3"><div class="range-labels"><span>많이 피곤해요</span><span>가뿐해요</span></div></div>
+            <label for="health-note">한 줄 메모 <span class="life-optional">선택</span></label><textarea id="health-note" maxlength="300" rows="2" placeholder="오늘 기억해 두고 싶은 일"></textarea>
+            <div class="life-save"><span>내용은 언제든 수정할 수 있어요.</span><button class="primary" type="submit">기록 저장</button></div>
+          </form>
+        </div>
+        <section class="panel life-history" aria-labelledby="life-history-title">
+          <div class="panel-heading"><div><h2 id="life-history-title">최근 7일</h2><p>기록한 날을 누르면 다시 볼 수 있어요.</p></div><span id="health-record-count" class="life-status">0일 기록</span></div>
+          <div class="life-averages" aria-label="최근 7일 기록의 평균">
+            <div><span>평균 수면</span><strong id="health-sleep-average">—</strong></div>
+            <div><span>평균 식사</span><strong id="health-meal-average">—</strong></div>
+            <div><span>평균 운동</span><strong id="health-exercise-average">—</strong></div>
+            <div><span>평균 컨디션</span><strong id="health-energy-average">—</strong></div>
+          </div>
+          <div id="health-week-list" class="health-week-list"></div>
+        </section>
+      </section>
+      <section class="view" id="view-activity" hidden>
+        <div class="section-heading life-heading"><div><h1>PC 활동</h1><p id="activity-date">오늘 사용한 시간을 한눈에.</p></div></div>
+        <section class="panel activity-overview" aria-label="오늘 PC 사용 요약">
+          <div class="activity-overview-heading"><span>오늘 사용 시간</span><div class="activity-controls"><span id="activity-status" class="activity-state" role="status">측정 준비 중</span><button class="text-button" data-view="settings">측정 설정</button></div></div>
+          <div class="activity-totals"><strong id="activity-total">—</strong><dl id="activity-categories" class="activity-categories"></dl></div>
+        </section>
+        <section class="panel activity-panel">
+          <div class="panel-heading"><h2>앱별 사용 시간</h2><small id="activity-app-count">많이 사용한 순</small></div>
+          <div id="activity-apps" class="activity-list"></div>
+          <details id="activity-more" class="activity-more" hidden><summary id="activity-more-label">나머지 앱 보기</summary><div id="activity-more-apps" class="activity-list"></div></details>
+          <details class="inline-help activity-help"><summary>측정 기준</summary><p>활성 앱 기준으로 약 30초마다 합산해요. 5분 이상 입력이 없으면 제외하고, 브라우저 사용은 기타로 집계해요.</p><p>앱 이름과 사용 시간은 이 PC에 저장해요. 화면·창 제목·주소·키 입력 내용은 저장하지 않아요.</p></details>
+        </section>
+      </section>
+      <section class="view" id="view-review" hidden>
+        <div class="section-heading life-heading review-heading"><div><h1>하루 결산</h1><p id="review-date"></p></div></div>
+        <article class="panel review-overview">
+          <div class="review-section-label">오늘의 기록</div><h2>오늘은 이만큼 남겼어.</h2>
+          <dl id="review-highlights" class="review-highlights"></dl>
+          <p id="review-empty" class="review-empty" hidden>아직 모인 기록이 없어. 남긴 기록이 생기면 여기에 모아 볼 수 있어.</p>
+        </article>
+        <div class="review-plans">
+          <section class="panel review-upcoming" id="review-upcoming" hidden><span class="review-section-label">가까운 일정</span><h2 id="review-next-title"></h2><p id="review-next-action"></p><button class="secondary" data-view="university">일정 확인</button></section>
+          <section class="panel review-tomorrow" id="review-tomorrow" hidden><div class="panel-heading"><h2>내일 수업</h2><span id="review-class-count"></span></div><div id="review-tomorrow-list" class="routine-list"></div></section>
+        </div>
+      </section>
+      <section class="view" id="view-memory" hidden>
+        <div class="section-heading"><div><h1>기억</h1></div><button id="add-memory" class="primary">＋ 기억 남기기</button></div>
+        <details class="inline-help"><summary>기억 반영 방식</summary><p>대화에서 취향·전공·생활 습관처럼 오래 참고할 정보를 자동으로 기억합니다. 최대 30개까지 저장하며 여기서 확인·수정·삭제할 수 있습니다. 수정·삭제하면 이전 대화는 답변 문맥에서 제외됩니다. 화면의 기록은 ‘대화 비우기’로 삭제할 수 있습니다.</p></details>
+        <div id="memories" class="memory-grid"></div>
+      </section>
+      <section class="view" id="view-settings" hidden>
+        <div class="section-heading"><div><h1>설정</h1></div></div>
+        <div class="settings-grid">
+          <form id="preferences-form" class="panel"><h2>대화 설정</h2><label for="name">대화에 사용할 이름</label><input id="name" maxlength="40" placeholder="이름" autocomplete="off"><label for="teasing">장난기 <output id="teasing-value">3</output><span class="out-of"> / 5</span></label><input id="teasing" type="range" min="0" max="5" value="3"><div class="range-labels"><span>담백하게</span><span>가볍게 장난치며</span></div><label class="check-label" for="character-motion"><input id="character-motion" type="checkbox" checked> 사진 움직임</label><p class="help">동작 줄이기 설정을 켜면 사진은 정지합니다.</p><button class="primary" type="submit">설정 저장</button></form>
+          <div class="panel"><h2>대화 연결</h2><p id="provider-status" class="integration-note" role="status">아직 AI 응답 기록 없음</p><p id="provider-issue" class="help" hidden></p><label for="model">최근 응답 모델</label><input id="model" value="응답 후 확인" readonly><p class="help">대화·기억·일정 해석은 Codex를 사용합니다. 연결할 수 없으면 Codex의 로그인 상태와 사용 한도를 확인한 뒤 다시 시도해 주세요.</p><details class="inline-help"><summary>이번 요청의 모델·연결 정보</summary><div id="provider-detail"></div></details></div>
+          <div class="panel"><h2>아사의 알림</h2><label class="check-label" for="notifications"><input id="notifications" type="checkbox"> 수업과 마감을 사용 중에 챙기기</label><label class="check-label" for="daily-briefing"><input id="daily-briefing" type="checkbox"> 오늘 처음 PC를 사용할 때 브리핑 받기</label><p class="help">e-Class 동기화 후 하루 한 번 표시합니다.</p><label class="check-label" for="casual-notifications"><input id="casual-notifications" type="checkbox"> 가끔 대화 알림 받기</label><details class="inline-help"><summary>알림 주기</summary><p>사용 시작 15~30분 뒤부터 25~45분 간격, 하루 최대 10회입니다. 5분 이상 자리를 비우면 별도 알림을 순서대로 표시합니다.</p></details><label class="check-label" for="game-nagging"><input id="game-nagging" type="checkbox"> 마감 하루 전 게임 중 다시 알려주기</label><label for="game-nag-minutes">게임 중 재알림 간격</label><select id="game-nag-minutes" class="settings-select"><option value="15">15분</option><option value="30">30분</option><option value="60">60분</option></select><label class="check-label" for="activity-tracking"><input id="activity-tracking" type="checkbox"> PC 사용 시간 측정하기</label><label for="break-minutes">연속 사용 휴식 알림</label><select id="break-minutes" class="settings-select"><option value="30">30분</option><option value="45">45분</option><option value="50">50분</option><option value="60">60분</option><option value="90">90분</option></select><label class="check-label" for="health-check-reminder"><input id="health-check-reminder" type="checkbox"> 생활 기록 알림 받기 (선택)</label><p class="help">기본은 꺼져 있어요. 생활 기록은 알림 없이도 남길 수 있어요.</p><label for="health-check-usage-minutes">생활 기록 확인 시점</label><select id="health-check-usage-minutes" class="settings-select"><option value="120">오늘 2시간 사용 후</option><option value="180">오늘 3시간 사용 후</option><option value="240">오늘 4시간 사용 후</option></select><label class="check-label" for="evening-review"><input id="evening-review" type="checkbox"> 하루 결산 알림 받기</label><p class="help">오늘 기록과 가까운 일정을 하루 한 번 요약해요. 보여줄 내용이 없으면 알리지 않아요.</p><label for="evening-review-usage-minutes">하루 결산 시점</label><select id="evening-review-usage-minutes" class="settings-select"><option value="240">오늘 4시간 사용 후</option><option value="360">오늘 6시간 사용 후</option><option value="480">오늘 8시간 사용 후</option></select><div class="field-row two"><div><label for="quiet-start">방해 금지 시작</label><input id="quiet-start" type="time"></div><div><label for="quiet-end">방해 금지 종료</label><input id="quiet-end" type="time"></div></div><p class="help">자리 비움은 5분 이상 입력이 없을 때로 판단합니다.</p></div>
+          <div class="panel"><h2>알림 소리와 방해 금지</h2><label for="notification-volume">알림 음량 <output id="notification-volume-value" for="notification-volume">70%</output></label><input id="notification-volume" type="range" min="0" max="100" step="1" value="70"><p class="help">0%는 음소거입니다. 저장 후 다음 알림부터 적용됩니다.</p><button class="primary" type="submit" form="preferences-form">알림 설정 저장</button><label class="check-label" for="quiet-mode-enabled"><input id="quiet-mode-enabled" type="checkbox"> 설정한 시간에 방해 금지 모드 사용</label><p class="help">끄면 지정한 시간에도 알림을 표시합니다.</p></div>
+          <div class="panel"><h2>놓친 알림</h2><p class="help">표시하지 못한 알림입니다.</p><div id="missed-notifications" class="missed-list"></div><button id="clear-missed-notifications" class="secondary" type="button">목록 비우기</button></div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+</div>
+<div id="toast" role="status" hidden></div>
+<dialog id="chat-menu"><h2>대화 메뉴</h2><section id="widget-appearance" class="widget-only"><label for="widget-transparency">배경 투명도 <output id="widget-transparency-value" for="widget-transparency">36%</output></label><input id="widget-transparency" type="range" min="0" max="100" step="1" value="36" aria-describedby="widget-transparency-help"><div class="range-labels"><span>불투명</span><span>투명</span></div><p id="widget-transparency-help">배경만 조절하며 글씨와 버튼은 유지됩니다.</p><button id="reset-widget-transparency" type="button" class="secondary">기본값</button></section><div class="chat-menu-links"><button data-view="home">나의 하루</button><button data-view="university">내 일정</button><button data-view="routines">생활</button><button data-view="memory">기억</button><button data-view="settings">설정</button><button id="clear-chat">대화 비우기</button></div><button id="close-chat-menu" class="secondary">닫기</button></dialog>
+<dialog id="memory-dialog"><form id="memory-form"><h2 id="memory-title">기억 남기기</h2><label for="memory-content">아사에게 알려주고 싶은 것</label><textarea id="memory-content" maxlength="500" rows="5" required placeholder="예: 나는 월요일 오전 수업이 있어."></textarea><p class="help">이 내용은 대화 문맥에 포함돼요. 최대 500자.</p><div class="button-row"><button type="submit" class="primary">저장</button><button id="cancel-memory" type="button" class="secondary">취소</button></div></form></dialog>
+<dialog id="class-dialog"><form id="class-form"><h2 id="class-title">수업 추가</h2><label for="class-name">수업 이름</label><input id="class-name" maxlength="60" required placeholder="예: 컴퓨터 그래픽스"><div class="field-row"><div><label for="class-day">요일</label><select id="class-day" required><option value="1">월요일</option><option value="2">화요일</option><option value="3">수요일</option><option value="4">목요일</option><option value="5">금요일</option><option value="6">토요일</option><option value="7">일요일</option></select></div><div><label for="class-start">시작</label><input id="class-start" type="time" required></div><div><label for="class-end">종료</label><input id="class-end" type="time" required></div></div><label for="class-location">강의실</label><input id="class-location" maxlength="80" placeholder="예: 공학관 301호"><div class="button-row dialog-actions"><button type="submit" class="primary">저장</button><button id="cancel-class" type="button" class="secondary">취소</button></div></form></dialog>
+<dialog id="academic-dialog"><form id="academic-form"><h2 id="academic-title">과제·시험 추가</h2><div class="field-row two"><div><label for="academic-kind">종류</label><select id="academic-kind"><option value="assignment">과제</option><option value="exam">시험</option><option value="event">기타 일정</option></select></div><div><label for="academic-course">과목</label><input id="academic-course" maxlength="60" placeholder="예: 자료구조"></div></div><label for="academic-name">일정 이름</label><input id="academic-name" maxlength="100" required placeholder="예: 3주차 과제 제출"><label for="academic-due">마감 날짜와 시간</label><input id="academic-due" type="datetime-local" required><label for="academic-notes">메모</label><textarea id="academic-notes" maxlength="500" rows="3" placeholder="준비물이나 제출 방법을 적어두세요."></textarea><div class="button-row dialog-actions"><button type="submit" class="primary">저장</button><button id="cancel-academic" type="button" class="secondary">취소</button></div></form></dialog>
+<dialog id="routine-dialog"><form id="routine-form"><h2 id="routine-title">루틴 추가</h2><div class="field-row two"><div><label for="routine-category">종류</label><select id="routine-category"><option value="sleep">수면</option><option value="exercise">운동</option><option value="meal">식사</option><option value="study">공부</option><option value="other">기타</option></select></div><div><label for="routine-time">알림 시간</label><input id="routine-time" type="time" required></div></div><label for="routine-name">루틴 이름</label><input id="routine-name" maxlength="60" required placeholder="예: 20분 스트레칭"><fieldset class="weekday-field"><legend>반복 요일</legend><div class="weekday-options"><label><input type="checkbox" name="routine-day" value="1">월</label><label><input type="checkbox" name="routine-day" value="2">화</label><label><input type="checkbox" name="routine-day" value="3">수</label><label><input type="checkbox" name="routine-day" value="4">목</label><label><input type="checkbox" name="routine-day" value="5">금</label><label><input type="checkbox" name="routine-day" value="6">토</label><label><input type="checkbox" name="routine-day" value="7">일</label></div></fieldset><label for="routine-notes">메모</label><textarea id="routine-notes" maxlength="300" rows="3" placeholder="준비할 것이나 목표를 적어두세요."></textarea><p class="help">정한 시각과 30분 뒤에 미완료 루틴을 Windows 알림으로 알려줘요.</p><div class="button-row dialog-actions"><button type="submit" class="primary">저장</button><button id="cancel-routine" type="button" class="secondary">취소</button></div></form></dialog>
+    <dialog id="eclass-dialog"><h2>e-Class 확장 프로그램 연결</h2><p class="help">프로젝트 폴더 안의 extensions\rin-eclass-sync 폴더를 사용합니다. 아사 화면의 동기화 버튼을 사용하려면 수정된 확장 프로그램을 한 번 다시 로드해야 합니다.</p><ol class="install-steps"><li><strong>chrome://extensions</strong>를 엽니다.</li><li><strong>아사 e-Class Sync</strong>(기존 Rin e-Class Sync) 카드의 새로고침 버튼을 누릅니다.</li><li><strong>아사 탭도 새로고침</strong>한 뒤 ‘e-Class 동기화’를 다시 누릅니다.</li></ol><div class="path-box" id="extension-path">extensions\rin-eclass-sync</div><div class="button-row dialog-actions"><button id="copy-extension-path" type="button" class="primary">폴더 경로 복사</button><button id="close-eclass-dialog" type="button" class="secondary">닫기</button></div></dialog>
+<dialog id="confirm-dialog"><h2 id="confirm-title">삭제 확인</h2><p id="confirm-description" class="help"></p><div class="button-row"><button id="confirm-yes" class="primary">삭제</button><button id="confirm-no" class="secondary">취소</button></div></dialog>
+</body></html>
